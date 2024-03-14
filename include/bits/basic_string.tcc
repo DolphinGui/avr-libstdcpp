@@ -704,7 +704,7 @@ _GLIBCXX_STRING_CONSTEXPR
 
 #undef _GLIBCXX_STRING_CONSTEXPR
 
-bool __is_whitespace_patched_assumes_utf8_thisisbad(int c) {
+inline bool __is_whitespace_patched_assumes_utf8_thisisbad(int c) noexcept {
   static unsigned int whitespace[] = {
       0x9, 0x0a, 0x0b, 0x0c, 0x0d, 0x20, 0x85, 0xc2a0,
   };
