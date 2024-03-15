@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 ROOT=$1
 FILES=("any"
@@ -67,6 +67,6 @@ FILES=("any"
 
 for f in ${FILES[@]}
 do
-cp "include/$f" "$ROOT/$f"
+cp "$(dirname $0)/include/$f" "$ROOT/$f"
 done
 # cp include
